@@ -1,0 +1,135 @@
+/*reset*/
+body,nav,header,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+body {
+    font-family: Arial,"微软雅黑";
+    font-size: 14px;
+    color: #434343;
+}
+
+ul,li { list-style: none; }
+
+img { border: none; }
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+/*end of reset*/
+
+header {
+    position: fixed;
+    z-index: 10;
+    height: 60px;
+    width: 100%;
+    background-color: #9d9a95;
+}
+
+.nav-name {
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 14px;
+}
+
+nav{
+    float: right;
+    margin-top: 10px;
+    margin-right: 2%;
+}
+
+.nav-list{
+    display: inline-block;
+    /*padding-left: 30px;*/
+    padding: 10px;
+}
+
+.nav-list a{  opacity: .8; }
+
+.nav-list>a:hover{opacity: 1;}
+
+.nav-list-after:after {
+    content: "";
+    margin-left: 20px;
+    border-left: 1px solid #fff;
+    opacity: .8;
+}
+
+.index-banner img{
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.index-banner {
+    font-size: 20px;
+}
+
+@media screen and (max-width:1024px){
+.index-banner {
+font-size: 16px;
+  }
+}
+
+@media screen and (max-width:943px){
+.index-banner {
+font-size: 12px;
+  }
+}
+
+@media screen and (max-width:735px){
+    .index-banner {
+        font-size: 8px;
+    }
+}
+
+
+.banner-text-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 8em;
+    margin-left: 5em;
+    max-width: 300em;
+    height: auto;
+}
+
+
+.banner-text-container>h1 {
+    font-size: 4em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.banner-text-container>h1>span{ letter-spacing: 30px; }
+
+.banner-text-container>p {
+    max-width: 25em;
+    padding: 1em 0;
+    font-size: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+#banner-btn-about {
+    height: 2.5em;
+    width: 14em;
+    background-color: #9d9a95;
+    color: #fff;
+    border: none;
+    margin-top: .9em;
+}
+
+ /*技能部分开始*/
+
+.skill{
+    width: 100vw;
+    height: 600px;
+    background-color: #fff;
+}
+
