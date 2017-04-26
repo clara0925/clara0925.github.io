@@ -47,9 +47,19 @@ nav{
     padding: 10px;
 }
 
+@media screen and (max-width:520px){
+    .nav-list {
+        display: none;
+    }
+}
+
 .nav-list a{  opacity: .8; }
 
-.nav-list>a:hover{opacity: 1;}
+.nav-list>a:hover{
+    opacity: 1;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
 
 .nav-list-after:after {
     content: "";
@@ -58,57 +68,61 @@ nav{
     opacity: .8;
 }
 
-.index-banner img{
-    height: auto;
-    max-width: 100%;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-}
-
 .index-banner {
+    background: url("img/banner.png") no-repeat right center;
+    background-size: cover;
     font-size: 20px;
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1280px){
 .index-banner {
-font-size: 16px;
+font-size: 18px;
   }
 }
 
-@media screen and (max-width:943px){
-.index-banner {
-font-size: 12px;
-  }
-}
-
-@media screen and (max-width:735px){
+@media screen and (max-width:1220px){
     .index-banner {
-        font-size: 8px;
+    font-size: 15px;
+      }
+}
+
+@media screen and (max-width:1150px){
+    .index-banner {
+        font-size: 14px;
     }
 }
 
-
-.banner-text-container {
-    position: relative;
-    z-index: 2;
-    margin-top: 8em;
-    margin-left: 5em;
-    max-width: 300em;
-    height: auto;
+@media screen and (max-width:930px){
+    .index-banner {
+        background: url("img/banner.png") no-repeat left center;
+        background-size: cover;
+    }
 }
 
+.banner-text-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    position: relative;
+    margin-left: 5em;
+    max-width: 30em;
+    height: 100vh;
+}
 
 .banner-text-container>h1 {
+    padding-top: 1.2em;
     font-size: 4em;
     color: #fff;
     font-weight: 500;
 }
 
-.banner-text-container>h1>span{ letter-spacing: 30px; }
+.banner-text-container>h1>span{ letter-spacing: .3em; }
 
 .banner-text-container>p {
-    max-width: 25em;
+    width: 18.5em;
     padding: 1em 0;
     font-size: 1em;
     color: #fff;
@@ -122,14 +136,135 @@ font-size: 12px;
     background-color: #9d9a95;
     color: #fff;
     border: none;
-    margin-top: .9em;
+    margin-top: .7em;
+    margin-bottom: 3em;
 }
 
  /*技能部分开始*/
 
 .skill{
-    width: 100vw;
-    height: 600px;
+    width: 100%;
+    height: auto;
     background-color: #fff;
+}
+
+.skill-list-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.skill-list {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    /*background-color: #f95959;*/
+    border: 3px solid #f95959;
+    margin: 80px 20px;
+}
+
+ /*技能部分结束*/
+
+.work{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+
+    width: 90%;
+    margin: 20px auto;
+}
+
+.work-piece {
+    width: 400px;
+    height: 300px;
+    margin: 25px;
+    /*-webkit-flex: 1 1 auto;*/
+    /*flex: 1 1 auto;*/
+    /*-webkit-transition: width 0.7s ease-out;*/
+    /*transition: width 0.7s ease-out;*/
+
+    background-color: #dbdbdb;
+    box-sizing: border-box;
+}
+/*作品结束*/
+
+.nonsense {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 320px;
+    width: 100vw;
+    background-color: #f95959;
+
+}
+
+
+.nonsense p{
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.nonsense p span {
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+ /*名人名言结束*/
+
+footer {
+    width: 100vw;
+    background-color: #4e4b49;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.footer-icon-container {
+    margin-top: 20px;
+}
+
+.footer-icon-container li {
+    display: inline-block;
+    opacity: .2;
+    padding: 0 10px;
+}
+
+.footer-icon-container li img {
+    height: 38px;
+    width: 38px;
+}
+
+.footer-icon-container li:hover {
+    opacity: .8;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+}
+
+footer>p{
+    color: #fffbf9;
+    font-size: 14px;
+    margin-left: 2%;
+    opacity: .2;
+    padding: 10px 0;
+}
+
+footer>p:hover {
+    opacity: .8;
+    transition-duration: .4s;
+    transition-timing-function: ease;
 }
 
