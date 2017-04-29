@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="index/js/jquery-3.2.0.min.js"></script>
+    <title>clock</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .background{display: flex;display: -webkit-flex;}
+        .left-side {background-color: #4d5061;width: 50vw;height: 100vh;}
+        .right-side {background-color: #fd8e84;width: 50vw;height: 100vh;}
+    </style>
+</head>
+  <div class="background">
+     <div class="left-side">
+         <input type="text" value="00:00">
+         <input type="button" value="开始">
+         <input type="button" value="计时">
+         <input type="button" value="结束">
+         <div  id="time-now">
+         </div>
+     </div>
+     <script>
+        var oTxt=document.getElementsByTagName("input")[0];
+        var oStart=document.getElementsByTagName("input")[1];
+        var oStop=document.getElementsByTagName("input")[2];
+        var oReset=document.getElementsByTagName("input")[3];
+        var n= 0, timer=null;
+        //开始计时
+        oStart.onclick= function () {
+            clearInterval(timer);
+            timer=setInterval(function () {
+                n++;
+                var m=parseInt(n/60);
+                var s=parseInt(n%60);
+                oTxt.value=toDub(m)+":"+toDub(s);
+            },1000/60);
+        };
+        //写下计时器
+        oStop.onclick= function () {
+            var div = document.getElementById("time-now");
+            var textP = document.createElement("p");
+            textP.innerText = oTxt.value;
+            div.appendChild(textP)
+        };
+
+        //重置并清零
+        oReset.onclick= function () {
+            clearInterval(timer); //结束计数
+            oTxt.value="00:00";
+            n=0;
+        }
+        //补零
+        function toDub(n){
+            return n<10?"0"+n:""+n;
+        }
+     </script>
+
+     <div class="right-side">
+
+     </div>
+  </div>
+
+</body>
+</html>

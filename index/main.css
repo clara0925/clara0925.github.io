@@ -94,7 +94,7 @@ font-size: 18px;
 
 @media screen and (max-width:930px){
     .index-banner {
-        background: url("img/banner.png") no-repeat left center;
+        background: url("img/banner.jpg") no-repeat left center;
         background-size: cover;
     }
 }
@@ -108,13 +108,13 @@ font-size: 18px;
     -webkit-flex-direction: column;
     position: relative;
     margin-left: 5em;
-    max-width: 30em;
+    max-width: 40em;
     height: 100vh;
 }
 
 .banner-text-container>h1 {
     padding-top: 1.2em;
-    font-size: 4em;
+    font-size: 3em;
     color: #fff;
     font-weight: 500;
 }
@@ -155,7 +155,7 @@ font-size: 18px;
     -webkit-flex-flow: row wrap;
     align-items: flex-end;
     justify-content: space-around;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -163,7 +163,6 @@ font-size: 18px;
     height: 90px;
     width: 90px;
     border-radius: 50%;
-    /*background-color: #f95959;*/
     border: 3px solid #f95959;
     margin: 80px 20px;
 }
@@ -177,22 +176,38 @@ font-size: 18px;
     -webkit-flex-flow: row wrap;
     justify-content: center;
 
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 40px auto;
 }
 
 .work-piece {
-    width: 400px;
-    height: 300px;
-    margin: 25px;
-    /*-webkit-flex: 1 1 auto;*/
-    /*flex: 1 1 auto;*/
-    /*-webkit-transition: width 0.7s ease-out;*/
-    /*transition: width 0.7s ease-out;*/
-
-    background-color: #dbdbdb;
-    box-sizing: border-box;
+    position: relative;
+    width:350px;
+    height: 320px;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 1.5%;
 }
+
+.work-describe {
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 89, 89, .85);
+    width: 350px;
+    height: 320px;
+}
+
+.work-describe p {
+    font-size: 16px;
+    line-height: 1.8;
+    display: none;
+}
+
 /*作品结束*/
 
 .nonsense {
