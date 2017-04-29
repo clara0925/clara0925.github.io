@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    display: flex;
+    display: -webkit-flex;
+}
+.left-side {
+    background-color: #687387;
+    width: 50vw;
+    height: 100vh;
+}
+.stop-watch {
+    width: 52%;
+    height: 80%;
+    background-color: #4d5061;
+    margin:10% auto;
+    box-shadow: 5px 5px 10px #282c36;
+    overflow: hidden;
+
+}
+.time-show {
+    margin-top: 20%;
+    display: block;
+    background-color: #4d5061;
+    border: none;
+    width: 100%;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    color: #687387;
+    text-shadow: -1px 0 #6e8c96,
+                 0 1px #6e8c96 ,
+                 2px 2px #3a4351,
+                 2px 0 #3a4351;
+}
+
+.btn-wrap {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stop-watch-btn {
+    margin: 10px;
+    min-width: 60px;
+    min-height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #8cb1bb;
+    color: #c6f4fe;
+}
+
+#time-now {margin-top: 30px;}
+
+#time-now p{
+    color: #c6f4fe;
+    font-size: 18px;
+    text-align: center;
+    line-height: 2.2;
+    border-bottom: 1px solid #6e8693;
+    width: 80%;
+    margin: 0 auto;
+}
+.right-side {
+    background-color: #FF9898;
+    width: 50vw;
+    height: 100vh;
+}
+
+#clock {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #cf455c;
+    margin:25% auto;
+    box-shadow: 5px 5px 10px #470031;
+    overflow: hidden;
+    position: relative;
+}
+#clock>div{
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(0.1,2.7,2,1);
+}
+#scale {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+}
+#point {
+    width: 3px;
+    height: 5px;
+    background: #f68593;
+    border-radius: 20%;
+    margin: auto;
+    opacity: .6;
+}
+#number {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #f68593;
+    text-align: center;
+    line-height: 20px;
+}
+
+#hour {
+    width: 6px;
+    height: 130px;
+    background: #fa5069;
+    border-radius: 20%;
+    transform-origin: 11% 100%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+}
+#minute {
+    width: 4px;
+    height: 170px;
+    background: #df6a69;
+    position: absolute;
+    border-radius: 20%;
+    transform-origin: 0 100%;
+    top: 30px;
+    left: 50%;
+}
+#second {
+    width: 2px;
+    height: 190px;
+    background: #f68593;
+    border-radius: 20%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform-origin: 80% 100%;
+    z-index: 100;
+}
