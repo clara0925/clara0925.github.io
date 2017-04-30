@@ -67,11 +67,15 @@
       </script>
 
      <div class="right-side">
+         <div class="clock-outer">
          <div id="clock">
+             <div class="clock-center"></div>
+             <div class="clock-center-round"></div>
              <div id="second"></div>
              <div id="minute"></div>
              <div id="hour"></div>
          </div>
+        </div>
      </div>
 
       <!--时钟-->
@@ -110,8 +114,9 @@
               number.id = 'number';
               number.style.transform = 'rotate(-'+i * 6+'deg)'
               if (i % 5 == 0) {
-                  number.innerHTML = i / 5;
-                  point.style.height = '15px';
+//                  number.innerHTML = i / 5 ;
+                  point.style.height = '8px';
+                  point.style.width = '8px';
               }
               scale.appendChild(number);
           }
