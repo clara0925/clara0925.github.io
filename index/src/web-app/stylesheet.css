@@ -8,316 +8,275 @@ body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
 a{
     text-decoration: none;
     display: block;
-    /* color:white;*/
+}
+
+li {
+    list-style: none;
 }
 
 img{
     border:none;
-    /*display: block;*/
-}
-
-.clearfloat{
-    zoom: 1;
-}
-
-.clearfloat:after{
-    display:block;
-    clear:both;
-    content: "";
-    visibility: hidden;
-    height:0;
 }
 
 /*重置样式从这里结束*/
-
-html { font-size: 20px; }
-body {
-    background-color: #f6f6f6;
-}
-/*导航栏*/
-
-.top-head-bar {
-    height: 2.25rem;
-    width: 100%;
-    background-color: #67C7C7;
+@media screen and (device-width: 768px){
+    html { font-size: 48px; }
 }
 
-.top-head-bar h4 {
-    color: #fff;
-    text-align: center;
-    line-height: 2.25rem;
-    font-weight: 400;
+@media screen and (max-device-width: 480px){
+    html { font-size: 29px; }
 }
 
-nav {
-    height: 40px;
-    width: 100%;
-    background-color: #fff;
+@media screen and (max-device-width: 414px){
+    html { font-size: 25px; }
 }
 
-nav ul {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    justify-content: space-around;
-
-    text-align: center;
+@media screen and (max-device-width: 375px){
+    html { font-size: 23px; }
+}
+@media screen and (max-device-width: 320px){
+    html { font-size: 20px; }
 }
 
-nav li {
-    width: 2.8rem;
-    line-height: 1.85rem;
-    list-style: none;
-}
 
-nav li a {
-    font-size: 16px;
-    color: #2f2f38;
-    font-weight: 500;
-}
 
-nav li:first-child {
-    box-sizing: border-box;
-    border-bottom: 3px solid #67C7C7;
-
-}
+body {  background-color: #f4f4f4;  }
+/*原本有个导航栏在这里结束===========================================*/
 
 .top-banner img{
     width: 100%;
 }
 
-.top-tags {
-    height: 14.1rem;
+.banner-container {
+    position: relative;
     width: 100%;
-    background-color: #fff;
-    margin-top: -.25rem;
-}
-
-.top-tags>ul {
-    width: 90%;
-    height: 5.8rem;
-    margin-left: 5%;
-    text-align: center;
-    display: -webkit-flex;
-    justify-content: space-around;
-    align-items: center;
-
-    border-bottom: 1px solid #e3e3e3;
-
-}
-
-.top-tags li {
-    list-style: none;
-    text-align: center;
-}
-
-
-.top-tags p {
-    font-size: 15px;
-    color: #2f2f38;
-    font-weight: 500;
-}
-
-.tags-img:before {
-    content: " ";
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background-color: #67C7C7;
-    display: block;
-    margin-bottom: .7rem;
-}
-
-.top-tags-col {
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    width: 90%;
-    margin-left: 5%;
-    text-align: center;
-}
-
-.top-tags-common {
-    box-sizing: border-box;
-    -webkit-flex-grow: 1;
-}
-
-.top-tags-common>img {
-    height: 4rem;
-    width: 3.5rem;
-}
-
-.top-tags-common>h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2f2f38;
-}
-
-.top-tags-common>p {
-    font-size: 14px;
-}
-
-.top-tags-col1 {
-    border-right: 1px solid #e3e3e3;
-}
-
-.top-tags-col2 {
-    border-right: 1px solid #e3e3e3;
-}
-
-.main-part-one {
-    height: 13rem;
-    width: 100%;
-    background-color: #fff;
-    margin-top: .5rem;
-}
-
-.main-part-one>h3 {
-    font-size: 18px;
-    color: #2f2f38;
-    width: 90%;
-    margin-left: 5%;
-    line-height: 2.2rem;
-    border-bottom: 1px solid #e3e3e3;
-}
-
-
-.main-part-img {
-    display: inline-block;
-    position: absolute;
-    margin-top: .5rem;
-    margin-left: 5%;
-    height: 10.1rem;
-}
-
-.main-part-img img {
-    width: 4.4rem;
-    display: block;
-    padding: .2rem 0;
-}
-
-.content-wrap {
-    margin-left: 30%;
-}
-
-.part-one-content {
-    margin-left: 5%;
-    margin-top: .5rem;
-    height: 10.1rem;
-    display: -webkit-flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-flow: column wrap;
-    -webkit-flex-flow: column wrap;
-    overflow: hidden;
-
-}
-.part-one-content li {
-    list-style: none;
-    /*margin:.1rem .2rem;*/
-    margin: .2rem;
-    background-color: #f2f2f2;
-    line-height: 2rem;
-    width: 41%;
-}
-
-.part-one-content li>h5 {
-    font-size: 16px;
-    font-weight: 500;
-
-    text-align: center;
-}
-
-.articles {
-    height: 17.5rem;
-    background-color: #fff;
-    margin-top: .5rem;
-}
-
-.articles div>img {
-    width: 5.4rem;
-    height: 3.8rem;
-}
-
-.article1 {
-    height: 4.8rem;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #e3e3e3;
-
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column wrap;
-    align-items: flex-start;
-}
-
-.article1>img {
-    margin-left: 5%;
-    margin-top: .5rem;
-}
-
-.article1>h4 {
-    width: 55%;
-    height: 3rem;
-    word-break: break-all;
-
-    font-size: 18px;
-    color: #616174;
-    padding-top: .5rem;
-    /*padding-left: .5rem;*/
-    line-height: 1.2;
-}
-
-.article1>p {
-    font-size: 13px;
-    color: #6e6e6e;
-    /*padding-left: .5rem;*/
-}
-
-.article3 {
-    height: 7.5rem;
-    width: 90%;
-    margin-left: 5%;
-}
-
-.article3>h4 {
-    word-break: break-all;
-    font-size: 18px;
-    color: #616174;
-    padding-top: .5rem;
-    line-height: 1.2;
-}
-
-.img-container {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: .5rem;
-    overflow: hidden;
-}
-
-.img-container>img {
-    padding-right: 8px;
-    max-width: 32%;
     height: auto;
-
+}
+/*banner=======================================================*/
+.note {
+    margin: -5px auto;
+    width: 15rem;
+    background-color: #fff;
+    text-align: center;
 }
 
-.article3>p {
+.note-content {
+    max-width: 53%;
+    margin: 0 auto;
+}
+
+.note-content p {
     font-size: 13px;
-    color: #6e6e6e;
-    padding-top: .5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-top: 5px;
+    line-height: 1.8;
+}
+.note-content ul {
+    padding: 5px 0;
 }
 
-footer {
-    height: 52px;
-    width: 100%;
-    background-color: #f7f7f7;
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    display: block;
+.note-content li {
+    font-size: 10px;
+    line-height: 1.6;
+    opacity: .7;
 }
+/*notification===================================================*/
+.both-like {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+.section-title{
+    font-size: 14px;
+    padding-top: .8rem;
+    text-align: center;
+    opacity: .7;
+}
+.both-like ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: scroll;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.both-like ul li {
+    margin: .25rem;
+    list-style: none;
+}
+.both-like ul li img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 4px;
+}
+
+.both-like ul p {
+    width: 5rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.both-like span {
+    color: #f4736a;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+/*大家喜欢===================================================*/
+.fresh-flower {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: .75rem;
+}
+
+.fresh-flower ul {
+    margin: .5rem auto;
+    /*display: flex;*/
+    /*display: -webkit-flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    /*-webkit-flex-direction: column;*/
+}
+
+.fresh-flower ul li{
+    list-style: none;
+    margin: 0 auto;
+    width: 14.5rem;
+    border-top: 1px solid #ececec;
+}
+
+.fresh-flower ul li img {
+    height: 8rem;
+    border-radius: 4px;
+    margin-top: .5rem;
+}
+
+.fresh-flower ul li p {
+    font-size: 13px;
+    padding: .5rem 0;
+    opacity: .7;
+}
+.fresh-flower ul p>span {
+    color: #f4736a;
+    font-size: 16px;
+}
+
+/*鲜花包月===================================================*/
+
+.gift {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+
+.gift ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.gift-container img{
+    width: 13rem;
+    height: 7.5rem;
+    border-radius: 4px;
+}
+
+.gift ul li {
+    margin: .25rem;
+}
+
+.gift ul p {
+    width: 7rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.gift span {
+    color: #f4736a;
+    font-size: 12px;
+}
+
+/*鲜花礼品===================================================*/
+.shop {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: .75rem;
+}
+
+.pic-wrap {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-pic {
+    margin-top: .5rem;
+    height: 4rem;
+    width: 14.5rem;
+    border-radius: 4px;
+}
+
+.shop-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-top: .5rem;
+    margin-left: .75rem;
+    margin-right: .25rem;
+}
+
+.shop ul li img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 4px;
+}
+
+.shop ul li {
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.shop ul p {
+    width: 5rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.shop span {
+    color: #f4736a;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+/* 闪电购===================================================*/
+footer{
+    height: 6rem;
+    text-align: center;
+}
+
+footer li{
+    margin-top: 1.5rem;
+    display: inline-block;
+    opacity: .7;
+    font-size: 13px;
+}
+
+footer h5 {
+    margin-top: 1rem;
+}
+/* footer===================================================*/
+

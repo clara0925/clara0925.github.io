@@ -52,13 +52,11 @@
           };
 
           oZero.onclick= function () {
-//              clearInterval(timer); //结束计数
-//              oTxt.value="00:00";
-//              n=0;
-              location.reload()
+              clearInterval(timer); //结束计数
+              oTxt.value="00:00";
+              n=0;
+              document.getElementById("time-now").innerHTML = "";//节点的实质是内容，只要内容是空，子节点自然也不存在了。
           };
-
-
           //补零
           function toDub(n){
               return n<10?"0"+n:""+n;
@@ -76,6 +74,7 @@
              <div id="hour"></div>
          </div>
         </div>
+
      </div>
 
       <!--时钟-->
@@ -121,7 +120,6 @@
               scale.appendChild(number);
           }
       </script>
-
   </div>
 
 </body>

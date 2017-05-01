@@ -10,6 +10,10 @@ body {
     color: #434343;
 }
 
+small {
+    color: #fff;
+}
+
 ul,li { list-style: none; }
 
 img { border: none; }
@@ -61,6 +65,12 @@ nav{
     transition-timing-function: ease;
 }
 
+.nav-list>a:active{
+    opacity: 1;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
 .nav-list-after:after {
     content: "";
     margin-left: 20px;
@@ -68,10 +78,13 @@ nav{
     opacity: .8;
 }
 
+/*banner开始======================================================*/
+
 .index-banner {
-    background: url("img/banner.png") no-repeat right center;
+    background: url("img/banner.jpg") no-repeat right center;
     background-size: cover;
     font-size: 20px;
+
 }
 
 @media screen and (max-width:1280px){
@@ -86,13 +99,21 @@ font-size: 18px;
       }
 }
 
-@media screen and (max-width:1150px){
+@media screen and (max-width:1100px){
     .index-banner {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width:930px){
+@media screen and (max-width:1088px){
+    .index-banner {
+        background: url("img/banner.jpg") no-repeat center center;
+        background-size: cover;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1024px){
     .index-banner {
         background: url("img/banner.jpg") no-repeat left center;
         background-size: cover;
@@ -107,7 +128,7 @@ font-size: 18px;
     flex-direction: column;
     -webkit-flex-direction: column;
     position: relative;
-    margin-left: 5em;
+    margin: 0 6em;
     max-width: 40em;
     height: 100vh;
 }
@@ -119,65 +140,36 @@ font-size: 18px;
     font-weight: 500;
 }
 
-.banner-text-container>h1>span{ letter-spacing: .3em; }
+.banner-text-container>h1>span{ letter-spacing: .2em; }
 
 .banner-text-container>p {
-    width: 18.5em;
+    max-width: 18.5em;
     padding: 1em 0;
-    font-size: 1em;
+    font-size: 1.3em;
     color: #fff;
     letter-spacing: 1px;
     line-height: 1.6;
 }
 
-/*#banner-btn-about {*/
-    /*height: 2.5em;*/
-    /*width: 14em;*/
-    /*background-color: #9d9a95;*/
-    /*color: #fff;*/
-    /*border: none;*/
-    /*margin-top: .7em;*/
-    /*margin-bottom: 3em;*/
-/*}*/
+/*banner结束===========================================================*/
 
- /*技能部分开始*/
 
-.skill{
-    width: 100%;
-    height: auto;
-    background-color: #fff;
+.work-part>h1 {
+    font-size: 100px;
+    margin-left: 5%;
+    padding-top: 40px;
+    color: #F0E5DE;
+    line-height: 1.3;
+    font-weight: 600;
 }
-
-.skill-list-container {
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row wrap;
-    -webkit-flex-flow: row wrap;
-    align-items: flex-end;
-    justify-content: space-around;
-    width: 90vw;
-    margin: 0 auto;
-}
-
-.skill-list {
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    border: 3px solid #f95959;
-    margin: 80px 20px;
-}
-
- /*技能部分结束*/
-
 .work{
     display: flex;
     display: -webkit-flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     justify-content: center;
-
     width: 100%;
-    margin: 40px auto;
+    margin: 0 auto;
 }
 
 .work-piece {
@@ -208,7 +200,65 @@ font-size: 18px;
     display: none;
 }
 
-/*作品结束*/
+/*作品结束===============================================================*/
+
+/*技能部分开始============================================================*/
+
+.skill{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.skill>h1 {
+    font-size: 100px;
+    margin-left: 5%;
+    padding-top: 40px;
+    color: #F0E5DE;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.skill-list-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90vw;
+    margin: 20px auto;
+}
+
+.skill-list {
+    margin: 10px 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.skill-list img {
+    height: 70px;
+    width: 70px;
+    opacity: .7;
+}
+
+.skill-list p {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 2px;
+    color: #7C7877;
+}
+
+.skill-list span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #a6a2a1;
+    line-height: 1.8;
+    word-break: break-all;
+}
+
+/*技能部分结束============================================================*/
 
 .nonsense {
     display: flex;
@@ -216,9 +266,10 @@ font-size: 18px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 320px;
+    height: 200px;
     width: 100vw;
-    background-color: #f95959;
+    margin-top: 40px;
+    background-color: #ABD0CE;
 
 }
 
@@ -235,11 +286,11 @@ font-size: 18px;
     color: #f4f4f4;
 }
 
- /*名人名言结束*/
+ /*名人名言结束==============================================================*/
 
 footer {
     width: 100vw;
-    background-color: #4e4b49;
+    background-color: #7C7877;
     display: flex;
     display: -webkit-flex;
     align-items: center;
@@ -254,7 +305,7 @@ footer {
 
 .footer-icon-container li {
     display: inline-block;
-    opacity: .2;
+    opacity: .4;
     padding: 0 10px;
 }
 
@@ -264,7 +315,7 @@ footer {
 }
 
 .footer-icon-container li:hover {
-    opacity: .8;
+    opacity: 1;
     transition-duration: .4s;
     transition-timing-function: ease;
 }

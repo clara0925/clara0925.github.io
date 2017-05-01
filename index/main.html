@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.dowebok.com/98/css/animate.min.css">
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <title>原子的站点</title>
 </head>
@@ -12,117 +13,108 @@
       <div class="nav-name"><img src="img/name-clara.png"></div>
       <nav>
           <ul>
-              <li class="nav-list nav-list-after"><a href="">关于我</a></li>
-              <li class="nav-list nav-list-after"><a href="">技能</a></li>
-              <li class="nav-list nav-list-after"><a href="">作品</a></li>
-              <li class="nav-list"><a href="">撩我</a></li>
+              <li class="nav-list nav-list-after"><a href="#pot-1">关于我</a></li>
+              <li class="nav-list nav-list-after"><a href="#pot-2">作品</a></li>
+              <li class="nav-list nav-list-after"><a href="#pot-3">技能</a></li>
+              <li class="nav-list"><a href="#pot-4">联系我</a></li>
           </ul>
       </nav>
   </header>
  <!--导航结束-->
-  <div class="index-banner">
-      <div class="banner-text-container">
-          <h1><span>你好呀，我是原子<br>
-              一名前端开发</span><br></h1>
-          <p class="banner-describe">有审美的像素眼，对技术有敬畏之心，有优雅的代码习惯...欸？
-              等等...我们还是看作品吧~</p>
-          <!--<input type="button" value="MORE ABOUT ME" id="banner-btn-about">-->
+  <div class="index-banner" id="pot-1">
+          <div class="banner-text-container wow fadeInLeft" data-wow-duration="2s">
+              <h1><span>前端开发<br>
+                  Front-End Dev</span><br></h1>
+              <p class="banner-describe">你好哇~我叫原子，很高兴认识你！这里是我的作品集，
+              看完之后跟我聊聊哦~</p>
+              <!--<input type="button" value="MORE ABOUT ME" id="banner-btn-about">-->
+          </div>
+  </div>
+  <!--banner结束-->
+  <div class="work-part"  id="pot-2">
+    <h1>My Work.</h1>
+      <div class="work">
+          <a href="" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+             <div class="work-piece">
+                 <img src="img/work-test1.jpg">
+                     <div class="work-describe">
+                         <p>还没想好做什么</p>
+                         <small>demo描述</small>
+                     </div>
+             </div>
+          </a>
+
+          <a href="" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".4s">
+              <div class="work-piece">
+                  <img src="img/work-test2.jpg">
+                  <div class="work-describe">
+                      <p>这里准备做一个计算器</p>
+                      <p>demo描述</p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="src/web-app/index.html" target="_blank" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".6s">
+              <div class="work-piece">
+                  <img src="img/work-test5.jpg">
+                  <div class="work-describe">
+                      <p>web app</p>
+                      <p></p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="src/clock/clock.html" target="_blank" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".8s">
+              <div class="work-piece">
+                  <img src="img/work-clock.jpg">
+                  <div class="work-describe">
+                      <p>计数秒表和时钟</p>
+                      <p></p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay="1.6s">
+              <div class="work-piece">
+                  <img src="img/work-test3.jpg">
+                  <div class="work-describe">
+                      <p>这里准备放一个能发弹幕的视频</p>
+                      <p>demo描述</p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay="1.4s">
+              <div class="work-piece">
+                  <img src="img/work-test4.jpg">
+                  <div class="work-describe">
+                      <p>没有想好放什么 应该是一个网页</p>
+                      <p>demo描述</p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="src/newWorld/index.html" target="_blank" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay="1.2s">
+              <div class="work-piece">
+                  <img src="img/work-new-world.jpg">
+                  <div class="work-describe">
+                      <p>技术产品官网</p>
+                      <p></p>
+                  </div>
+              </div>
+          </a>
+
+          <a href="" class="wow fadeInDown" data-wow-duration=".8s" data-wow-delay="1s">
+              <div class="work-piece">
+                  <img src="img/work-test6.jpg">
+                  <div class="work-describe">
+                      <p>可能是一个游戏</p>
+                      <p>demo描述</p>
+                  </div>
+              </div>
+          </a>
       </div>
   </div>
- <!--&lt;!&ndash;banner结束&ndash;&gt;-->
-  <!--<div class="skill">-->
-      <!--<ul class="skill-list-container">-->
-          <!--<li class="skill-list"></li>-->
-          <!--<li class="skill-list"></li>-->
-          <!--<li class="skill-list"></li>-->
-          <!--<li class="skill-list"></li>-->
-          <!--<li class="skill-list"></li>-->
-          <!--<li class="skill-list"></li>-->
-      <!--</ul>-->
-  <!--</div>-->
- <!--技能部分结束-->
-  <div class="work">
-      <a href="">
-         <div class="work-piece">
-             <img src="img/work-test1.jpg">
-                 <div class="work-describe">
-                     <p>名字</p>
-                     <p>demo描述</p>
-                 </div>
-         </div>
-      </a>
-
-      <a href="">
-          <div class="work-piece">
-              <img src="img/work-test2.jpg">
-              <div class="work-describe">
-                  <p>名字</p>
-                  <p>demo描述</p>
-              </div>
-          </div>
-      </a>
-
-      <a href="" target="_blank">
-          <div class="work-piece">
-              <img src="img/work-test5.jpg">
-              <div class="work-describe">
-                  <p>空白</p>
-                  <p></p>
-              </div>
-          </div>
-      </a>
-
-      <a href="src/clock/clock.html" target="_blank">
-          <div class="work-piece">
-              <img src="img/work-clock.jpg">
-              <div class="work-describe">
-                  <p>计数秒表和时钟</p>
-                  <p></p>
-              </div>
-          </div>
-      </a>
-
-      <a href="">
-          <div class="work-piece">
-              <img src="img/work-test3.jpg">
-              <div class="work-describe">
-                  <p>名字</p>
-                  <p>demo描述</p>
-              </div>
-          </div>
-      </a>
-
-      <a href="">
-          <div class="work-piece">
-              <img src="img/work-test4.jpg">
-              <div class="work-describe">
-                  <p>名字</p>
-                  <p>demo描述</p>
-              </div>
-          </div>
-      </a>
-
-      <a href="src/newWorld/index.html" target="_blank">
-          <div class="work-piece">
-              <img src="img/work-new-world.jpg">
-              <div class="work-describe">
-                  <p>技术产品官网</p>
-                  <p></p>
-              </div>
-          </div>
-      </a>
-
-      <a href="">
-          <div class="work-piece">
-              <img src="img/work-test6.jpg">
-              <div class="work-describe">
-                  <p>名字</p>
-                  <p>demo描述</p>
-              </div>
-          </div>
-      </a>
-  </div>
-
   <script>
 
       $(".work-describe").hide();
@@ -138,7 +130,28 @@
   </script>
 
 <!--作品结束-->
-  <div class="nonsense">
+  <div class="skill"  id="pot-3">
+      <h1>Why Me.</h1>
+      <ul class="skill-list-container">
+          <li class="skill-list">
+              <img src="img/coding.png">
+              <p>Coding</p>
+              <span>html5/CSS3/JavaScript/jQuery/AJAX/Bootstrap/自适应/浏览器兼容，最好不要超过三行的内容</span>
+          </li>
+          <li class="skill-list" >
+              <img src="img/web.png">
+              <p>Design</p>
+              <span>不知道写啥，大概写一些有审美什么的,不知道写啥，大概写一些有审美什么的</span>
+          </li>
+          <li class="skill-list" >
+              <img src="img/product.png">
+              <p>Product</p>
+              <span>不知道要说些啥，先这么放着，大概是写一些产品sense,大概是写一些产品sense</span>
+          </li>
+      </ul>
+  </div>
+  <!--技能部分结束-->
+  <div class="nonsense"  id="pot-4">
           <p>"It is a long established fact that a reader will be distracted by the
               readable content of a page when looking at its layout."
               <br>
@@ -156,6 +169,11 @@
       </div>
       <p>原子&nbsp;&nbsp;|&nbsp;&nbsp;360143389@qq.com &nbsp;&nbsp;|&nbsp;&nbsp; 深圳</p>
   </footer>
-
+  <script src="http://cdn.dowebok.com/131/js/wow.min.js">
+  </script>
+  <script>if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+      new WOW().init();
+  }
+  </script>
 </body>
 </html>
