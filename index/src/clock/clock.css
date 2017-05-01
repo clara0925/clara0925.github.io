@@ -5,17 +5,21 @@
 .background{
     display: flex;
     display: -webkit-flex;
+    flex-flow: row wrap;
 }
+
 .left-side {
     background-color: #687387;
-    width: 50vw;
+    width: 600px;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
     height: 100vh;
 }
 .stop-watch {
-    width: 52%;
-    height: 80%;
+    width: 400px;
+    height: 580px;
     background-color: #4d5061;
-    margin:10% auto;
+    margin: 11% auto;
     box-shadow: 5px 5px 10px #282c36;
     overflow: hidden;
 
@@ -68,13 +72,15 @@
 }
 .right-side {
     background-color: #FF9898;
-    width: 50vw;
+    width: 600px;
     height: 100vh;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
 }
 
 #clock {
     position: relative;
-    margin:25% auto;
+    margin: 20% auto;
     overflow: hidden;
     width: 400px;
     height: 400px;
