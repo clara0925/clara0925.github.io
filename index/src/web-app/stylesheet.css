@@ -1,0 +1,282 @@
+/*重置样式从这里开始*/
+body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
+    margin:0;
+    padding:0;
+    font-family: "Adobe Fan Heiti Std B","Microsoft YaHei",Arial,sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    border:none;
+}
+
+/*重置样式从这里结束*/
+@media screen and (device-width: 768px){
+    html { font-size: 48px; }
+}
+
+@media screen and (max-device-width: 480px){
+    html { font-size: 29px; }
+}
+
+@media screen and (max-device-width: 414px){
+    html { font-size: 25px; }
+}
+
+@media screen and (max-device-width: 375px){
+    html { font-size: 23px; }
+}
+@media screen and (max-device-width: 320px){
+    html { font-size: 20px; }
+}
+
+
+
+body {  background-color: #f4f4f4;  }
+/*原本有个导航栏在这里结束===========================================*/
+
+.top-banner img{
+    width: 100%;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+/*banner=======================================================*/
+.note {
+    margin: -10px auto;
+    width: 15rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.note-content {
+    max-width: 53%;
+    margin: 0 auto;
+}
+
+.note-content p {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-top: 5px;
+    line-height: 1.8;
+}
+.note-content ul {
+    padding: 5px 0;
+}
+
+.note-content li {
+    font-size: 10px;
+    line-height: 1.6;
+    opacity: .7;
+}
+/*notification===================================================*/
+.both-like {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+.section-title{
+    font-size: 14px;
+    padding-top: .8rem;
+    text-align: center;
+    opacity: .7;
+}
+.both-like ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: scroll;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.both-like ul li {
+    margin: .25rem;
+    list-style: none;
+}
+.both-like ul li img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 4px;
+}
+
+.both-like ul p {
+    width: 5rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.both-like span {
+    color: #f4736a;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+/*大家喜欢===================================================*/
+.fresh-flower {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: .75rem;
+}
+
+.fresh-flower ul {
+    margin: .5rem auto;
+    /*display: flex;*/
+    /*display: -webkit-flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    /*-webkit-flex-direction: column;*/
+}
+
+.fresh-flower ul li{
+    list-style: none;
+    margin: 0 auto;
+    width: 14.5rem;
+    border-top: 1px solid #ececec;
+}
+
+.fresh-flower ul li img {
+    height: 8rem;
+    border-radius: 4px;
+    margin-top: .5rem;
+}
+
+.fresh-flower ul li p {
+    font-size: 13px;
+    padding: .5rem 0;
+    opacity: .7;
+}
+.fresh-flower ul p>span {
+    color: #f4736a;
+    font-size: 16px;
+}
+
+/*鲜花包月===================================================*/
+
+.gift {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: 1rem;
+}
+
+.gift ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.gift-container img{
+    width: 13rem;
+    height: 7.5rem;
+    border-radius: 4px;
+}
+
+.gift ul li {
+    margin: .25rem;
+}
+
+.gift ul p {
+    width: 7rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.gift span {
+    color: #f4736a;
+    font-size: 12px;
+}
+
+/*鲜花礼品===================================================*/
+.shop {
+    width: 100vw;
+    background-color: #fff;
+    margin-top: .75rem;
+}
+
+.pic-wrap {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-pic {
+    margin-top: .5rem;
+    height: 4rem;
+    width: 14.5rem;
+    border-radius: 4px;
+}
+
+.shop-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-top: .5rem;
+    margin-left: .75rem;
+    margin-right: .25rem;
+}
+
+.shop ul li img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 4px;
+}
+
+.shop ul li {
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.shop ul p {
+    width: 5rem;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.shop span {
+    color: #f4736a;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+/* 闪电购===================================================*/
+footer{
+    height: 6rem;
+    text-align: center;
+}
+
+footer li{
+    margin-top: 1.5rem;
+    display: inline-block;
+    opacity: .7;
+    font-size: 13px;
+}
+
+footer h5 {
+    margin-top: 1rem;
+}
+/* footer===================================================*/
+

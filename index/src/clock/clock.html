@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <link href="clock.css" rel="stylesheet">
+
+</head>
+  <div class="background">
+     <div class="left-side">
+         <div class="stop-watch">
+             <input class="time-show" type="text" value="00:00">
+             <div class="btn-wrap">
+                 <input class="stop-watch-btn btn-start" type="button" value="开始">
+                 <input class="stop-watch-btn" type="button" value="计时">
+                 <input class="stop-watch-btn" type="button" value="停止">
+                 <input class="stop-watch-btn" type="button" value="清零">
+             </div>
+             <div  id="time-now">
+             </div>
+         </div>
+     </div>
+      <script>
+          // 秒表
+          var oTxt=document.getElementsByTagName("input")[0];
+          var oStart=document.getElementsByTagName("input")[1];
+          var oStop=document.getElementsByTagName("input")[2];
+          var oReset=document.getElementsByTagName("input")[3];
+          var oZero=document.getElementsByTagName("input")[4]
+          var n= 0, timer=null;
+          //开始计时
+          oStart.onclick= function () {
+              clearInterval(timer);
+              timer=setInterval(function () {
+                  n++;
+                  var m=parseInt(n/60);
+                  var s=parseInt(n%60);
+                  oTxt.value=toDub(m)+":"+toDub(s);
+              },1000/60);
+          };
+          //写下计时时间
+          oStop.onclick= function () {
+              var div = document.getElementById("time-now");
+              var textP = document.createElement("p");
+              textP.innerText = oTxt.value;
+              div.appendChild(textP);
+          };
+
+          //重置并清零
+          oReset.onclick= function () {
+              clearInterval(timer); //结束计数
+          };
+
+          oZero.onclick= function () {
+              clearInterval(timer); //结束计数
+              oTxt.value="00:00";
+              n=0;
+              document.getElementById("time-now").innerHTML = "";//节点的实质是内容，只要内容是空，子节点自然也不存在了。
+          };
+          //补零
+          function toDub(n){
+              return n<10?"0"+n:""+n;
+          }
+
+      </script>
+
+     <div class="right-side">
+         <div class="clock-outer">
+         <div id="clock">
+             <div class="clock-center"></div>
+             <div class="clock-center-round"></div>
+             <div id="second"></div>
+             <div id="minute"></div>
+             <div id="hour"></div>
+         </div>
+        </div>
+
+     </div>
+
+      <!--时钟-->
+      <script >
+          var clock = document.getElementById('clock');
+          var hour = document.getElementById('hour');
+          var minute = document.getElementById('minute');
+          var second = document.getElementById('second');
+
+          function surface() {
+              var currentDate = new Date();
+              var hours = currentDate.getHours();
+              var minutes = currentDate.getMinutes();
+              var seconds = currentDate.getSeconds();
+
+              seconds = hours * 3600 + minutes * 60 + seconds;
+
+              hour.style.transform = 'rotate('+seconds / 120+'deg)';
+              minute.style.transform = 'rotate('+seconds * 0.1+'deg)';
+              second.style.transform = 'rotate('+seconds * 6+'deg)';
+
+          }
+          setInterval('surface()', 1000);
+
+          for (var i = 1; i < 61; i++) {
+              var scale = document.createElement('div');
+              scale.id = 'scale';
+              scale.style.transform = 'rotate('+i * 6+'deg)';
+              clock.appendChild(scale);
+
+              var point = document.createElement('div');
+              point.id = 'point';
+              scale.appendChild(point);
+
+              var number = document.createElement('div');
+              number.id = 'number';
+              number.style.transform = 'rotate(-'+i * 6+'deg)'
+              if (i % 5 == 0) {
+//                  number.innerHTML = i / 5 ;
+                  point.style.height = '8px';
+                  point.style.width = '8px';
+              }
+              scale.appendChild(number);
+          }
+      </script>
+  </div>
+
+</body>
+</html>

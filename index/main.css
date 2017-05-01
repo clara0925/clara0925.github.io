@@ -1,0 +1,336 @@
+/*reset*/
+body,nav,header,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+body {
+    font-family: Arial,"微软雅黑";
+    font-size: 14px;
+    color: #434343;
+}
+
+small {
+    color: #fff;
+}
+
+ul,li { list-style: none; }
+
+img { border: none; }
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+/*end of reset*/
+
+header {
+    position: fixed;
+    z-index: 10;
+    height: 60px;
+    width: 100%;
+    background-color: #9d9a95;
+}
+
+.nav-name {
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 14px;
+}
+
+nav{
+    float: right;
+    margin-top: 10px;
+    margin-right: 2%;
+}
+
+.nav-list{
+    display: inline-block;
+    /*padding-left: 30px;*/
+    padding: 10px;
+}
+
+@media screen and (max-width:520px){
+    .nav-list {
+        display: none;
+    }
+}
+
+.nav-list a{  opacity: .8; }
+
+.nav-list>a:hover{
+    opacity: 1;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.nav-list>a:active{
+    opacity: 1;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.nav-list-after:after {
+    content: "";
+    margin-left: 20px;
+    border-left: 1px solid #fff;
+    opacity: .8;
+}
+
+/*banner开始======================================================*/
+
+.index-banner {
+    background: url("img/banner.jpg") no-repeat right center;
+    background-size: cover;
+    font-size: 20px;
+
+}
+
+@media screen and (max-width:1280px){
+.index-banner {
+font-size: 18px;
+  }
+}
+
+@media screen and (max-width:1220px){
+    .index-banner {
+    font-size: 15px;
+      }
+}
+
+@media screen and (max-width:1100px){
+    .index-banner {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1088px){
+    .index-banner {
+        background: url("img/banner.jpg") no-repeat center center;
+        background-size: cover;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .index-banner {
+        background: url("img/banner.jpg") no-repeat left center;
+        background-size: cover;
+    }
+}
+
+.banner-text-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    position: relative;
+    margin: 0 6em;
+    max-width: 40em;
+    height: 100vh;
+}
+
+.banner-text-container>h1 {
+    padding-top: 1.2em;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.banner-text-container>h1>span{ letter-spacing: .2em; }
+
+.banner-text-container>p {
+    max-width: 18.5em;
+    padding: 1em 0;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+/*banner结束===========================================================*/
+
+
+.work-part>h1 {
+    font-size: 100px;
+    margin-left: 5%;
+    padding-top: 40px;
+    color: #F0E5DE;
+    line-height: 1.3;
+    font-weight: 600;
+}
+.work{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.work-piece {
+    position: relative;
+    width:350px;
+    height: 280px;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.work-describe {
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 26, 28, 0.6);
+    width: 350px;
+    height: 280px;
+}
+
+.work-describe p {
+    font-size: 18px;
+    line-height: 1.8;
+    display: none;
+}
+
+/*作品结束===============================================================*/
+
+/*技能部分开始============================================================*/
+
+.skill{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.skill>h1 {
+    font-size: 100px;
+    margin-left: 5%;
+    padding-top: 40px;
+    color: #F0E5DE;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.skill-list-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90vw;
+    margin: 20px auto;
+}
+
+.skill-list {
+    margin: 10px 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.skill-list img {
+    height: 70px;
+    width: 70px;
+    opacity: .7;
+}
+
+.skill-list p {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 2px;
+    color: #7C7877;
+}
+
+.skill-list span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #a6a2a1;
+    line-height: 1.8;
+    word-break: break-all;
+}
+
+/*技能部分结束============================================================*/
+
+.nonsense {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    width: 100vw;
+    margin-top: 40px;
+    background-color: #ABD0CE;
+
+}
+
+
+.nonsense p{
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.nonsense p span {
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+ /*名人名言结束==============================================================*/
+
+footer {
+    width: 100vw;
+    background-color: #7C7877;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.footer-icon-container {
+    margin-top: 20px;
+}
+
+.footer-icon-container li {
+    display: inline-block;
+    opacity: .4;
+    padding: 0 10px;
+}
+
+.footer-icon-container li img {
+    height: 38px;
+    width: 38px;
+}
+
+.footer-icon-container li:hover {
+    opacity: 1;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+}
+
+footer>p{
+    color: #fffbf9;
+    font-size: 14px;
+    margin-left: 2%;
+    opacity: .2;
+    padding: 10px 0;
+}
+
+footer>p:hover {
+    opacity: .8;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+}
+
