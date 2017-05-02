@@ -39,8 +39,8 @@ img{
 }
 
 
-
-body {  background-color: #f4f4f4;  }
+html {background-color: #fff;}
+body {  background-color: #f4f4f4; max-width: 768px; margin: 0 auto; }
 /*原本有个导航栏在这里结束===========================================*/
 
 .top-banner img{
@@ -83,7 +83,7 @@ body {  background-color: #f4f4f4;  }
 }
 /*notification===================================================*/
 .both-like {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     margin-top: 1rem;
 }
@@ -128,7 +128,7 @@ body {  background-color: #f4f4f4;  }
 
 /*大家喜欢===================================================*/
 .fresh-flower {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     margin-top: .75rem;
 }
@@ -169,7 +169,7 @@ body {  background-color: #f4f4f4;  }
 /*鲜花包月===================================================*/
 
 .gift {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     margin-top: 1rem;
 }
@@ -208,7 +208,7 @@ body {  background-color: #f4f4f4;  }
 
 /*鲜花礼品===================================================*/
 .shop {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     margin-top: .75rem;
 }
