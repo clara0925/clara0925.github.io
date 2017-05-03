@@ -38,7 +38,7 @@ img{
     html { font-size: 20px; }
 }
 
-html {background-color: #fff;  }
+html {background-color: #fff;}
 body {
     background-color: #ededed;
     max-width: 480px;
@@ -47,16 +47,36 @@ body {
     box-shadow: 0 5px 10px #c8c8c8;
 }
 /*原本有个导航栏在这里结束===========================================*/
-
-.top-banner img{
-    width: 100%;
+header {
+    position: relative;
+    overflow: hidden;
 }
 
-.banner-container {
-    position: relative;
+header ul {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    width: 400%;
+}
+
+header ul li img{
     width: 100%;
     height: auto;
 }
+
+.banner .swiper-pagination span {
+    width: 14px;
+    height: 3px;
+    background:  #fff;
+    opacity: .2;
+    border-radius: 0;
+}
+
+.banner .pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+}
+
 /*banner=======================================================*/
 .note {
     margin: -6px auto;
@@ -104,7 +124,7 @@ body {
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;
     justify-content: flex-start;
-    overflow: scroll;
+    overflow: auto;
     margin-top: .5rem;
     margin-left: .5rem;
 }

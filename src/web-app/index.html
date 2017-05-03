@@ -2,7 +2,7 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no, email=no" />
     <!--禁止电话号码识别和邮件识别-->
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
@@ -11,21 +11,28 @@
     <!-- 启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
     <meta name="imageMode" content="force">
     <link href="stylesheet.css" rel="stylesheet" >
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.css" rel="stylesheet">
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js" rel="script"></script>
+    <!--<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>-->
     <title>每日花事</title>
 </head>
 <body>
-      <header class="top-banner">
-          <div class="banner-container">
-              <div><img src="img/banner1.jpg" ></div>
-              <!--<div><img src="img/banner2.jpg" ></div>-->
-              <!--<div><img src="img/banner3.jpg" ></div>-->
-              <!--<div><img src="img/banner4.jpg" ></div>-->
-          </div>
-          <div class="pagination-container">
-
+      <header class="banner swiper-container">
+          <ul class="banner-container swiper-wrapper">
+              <li class="swiper-slide"><img src="img/banner1.jpg" alt="1"></li>
+              <li  class="swiper-slide"><img src="img/banner2.jpg" alt="2"></li>
+              <li  class="swiper-slide"><img src="img/banner3.jpg" alt="3"></li>
+              <li  class="swiper-slide"><img src="img/banner4.jpg" alt="4"></li>
+          </ul>
+          <div class="swiper-pagination pagination swiper-pagination-bullets">
+              <span class="swiper-pagination-bullet"></span>
+              <span class="swiper-pagination-bullet"></span>
+              <span class="swiper-pagination-bullet"></span>
+              <span class="swiper-pagination-bullet"></span>
           </div>
       </header>
-      <!--end of banner================================-->
+      <!--end of banner=======================================================================-->
       <div class="note">
           <div class="note-content">
               <p>节假日收花时间调整</p>
@@ -40,7 +47,7 @@
       <!--end of note======================================-->
       <div class="both-like">
           <p class="section-title">——— ◇ 大家最爱的 ◇ ———</p>
-          <ul class="both-like-container">
+          <ul>
               <li><img src="img/like1.jpg"><p>简花·单品鲜花包月套餐<br><span>￥99</span></p></li>
               <li><img src="img/like2.jpg"><p>惠花·自由双拼包月套餐<br><span>￥139</span></p></li>
               <li><img src="img/like3.jpg"><p>繁花·混合鲜花包月套餐<br><span>￥159</span></p></li>
@@ -90,5 +97,17 @@
           </ul>
           <h5>❀ DAILY FLOWER ❀</h5>
       </footer>
+      <script>
+          var swiper = new Swiper('.banner', {
+              loop: true,
+              autoplay:2000,
+              grabCursor: true,
+              pagination:'.swiper-pagination',
+              paginationClickable:true,
+              preventClicks:false,
+              autoplayDisableOnInteraction: false,
+              effect:'slide'
+          });
+      </script>
 </body>
 </html>

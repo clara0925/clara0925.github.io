@@ -162,14 +162,13 @@ font-size: 18px;
     line-height: 1.3;
     font-weight: 600;
 }
+
 .work{
     display: flex;
     display: -webkit-flex;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
-    margin: 0 auto;
 }
 
 .work-piece {
