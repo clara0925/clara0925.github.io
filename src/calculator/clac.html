@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calc.css">
+    <title>计算器</title>
+</head>
+<body>
+    <div class="bg">
+        <div class="bg-1"></div>
+        <div class="bg-2"></div>
+        <div class="bg-3"></div>
+        <div class="bg-4"></div>
+    </div>
+    <div class="calc">
+        <div class="calc-container">
+            <div class="calc-show">
+                <p id="show">&nbsp;</p>
+                <input type="text" readonly="readonly" name="screen" id="screen">
+            </div>
+            <div class="button-wrap">
+                <input class="bg-color" type="button" value="C" onclick="clearAll()">
+                <input type="button" value="7" onclick="connectionDigital(this)">
+                <input type="button" value="4" onclick="connectionDigital(this)">
+                <input type="button" value="1" onclick="connectionDigital(this)">
+                <input type="button" value="" readonly="readonly">
+                <input class="bg-color" type="button" value="←" onclick="backspace()">
+                <input type="button" value="8" onclick="connectionDigital(this)">
+                <input type="button" value="5" onclick="connectionDigital(this)">
+                <input type="button" value="2" onclick="connectionDigital(this)">
+                <input type="button" value="0" onclick="connectionDigital(this)">
+                <input class="bg-color" type="button" value="/" onclick="calculation(this)">
+                <input type="button" value="9" onclick="connectionDigital(this)">
+                <input type="button" value="6" onclick="connectionDigital(this)">
+                <input type="button" value="3" onclick="connectionDigital(this)">
+                <input type="button" value="." onclick="connectionDigital(this)">
+                <input class="bg-color" type="button" value="x" onclick="calculation(this)">
+                <input class="bg-color" type="button" value="–" onclick="calculation(this)">
+                <input class="bg-color" type="button" value="+" onclick="calculation(this)">
+                <input type="button" value="=" onclick="getResult()">
+            </div>
+        </div>
+    </div>
+<script>
+    var result;
+    var operator;
+    var isPressEqualsKey = false;
+    //数字按键
+    function connectionDigital(control)
+    {
+        var txt = document.getElementById('screen');
+        if(isPressEqualsKey)
+        {
+            txt.value = "";
+            isPressEqualsKey = false;
+        }
+    //小数点
+        if(txt.value.indexOf('.') > -1 && control.value == '.')
+            return false;
+        txt.value += control.value;
+    }
+
+    //删除键事件
+    function backspace()
+    {
+        var txt = document.getElementById('screen');
+        txt.value = txt.value.substring(0,txt.value.length - 1);
+    }
+
+    //清空数字输入框
+    function clearAll()
+    {
+        document.getElementById('screen').value = "";
+        result = "";
+        operator = "";
+    }
+
+    // +、-、*、/
+    function calculation(control)
+    {
+        operator = control.value;
+        var txt = document.getElementById('screen');
+        if(txt.value == "")return false;
+        result = txt.value;
+        txt.value = "";
+    }
+
+    //计算结果
+    function getResult()
+    {
+        var opValue;
+        var sourseValue = parseFloat(result);
+        var txt = document.getElementById('screen');
+        if(operator == 'x')
+            opValue = sourseValue * parseFloat(txt.value);
+        else if(operator == '/')
+            opValue = sourseValue / parseFloat(txt.value);
+        else if(operator == '+')
+            opValue = sourseValue + parseFloat(txt.value);
+        else if(operator == '–')
+            opValue = sourseValue - parseFloat(txt.value);
+
+        txt.value = opValue;
+        isPressEqualsKey = true;
+        result = "";
+        opValue = "";
+    }
+</script>
+</body>
+</html>

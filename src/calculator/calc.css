@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+     max-height:770px;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.bg-1 {
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background: #00b39d;
+    box-shadow: 30px 120px 0 rgba(77, 199, 184, 0.8);
+
+    margin-left: -300px;
+    margin-top: -25px;
+}
+
+.bg-2 {
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+    background: #8d8de5;
+    box-shadow: 60px 40px 0 rgba(173, 173, 237, 0.85);
+    position: absolute;
+
+    margin-top: -1100px;
+    margin-left: 50%;
+}
+
+.bg-3 {
+    height: 750px;
+    width: 750px;
+    border-radius: 50%;
+    background: #ffe77b;
+    box-shadow: -80px 0 0 rgba(253, 247, 158, 0.85);
+    position: absolute;
+
+    margin-top: -350px;
+    margin-left: 50%;
+}
+
+.bg-4 {
+    height: 750px;
+    width: 750px;
+    border-radius: 50%;
+    background: #ffb698;
+    box-shadow: 80px 20px 0 rgba(250, 178, 150, 0.71);
+
+    margin-top: 150px;
+    margin-left: -20%;
+}
+
+.calc {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc-container {
+    height: 640px;
+    width: 410px;
+    background: #fff;
+    box-shadow: 1px 1px 14px rgb(156, 156, 156);
+}
+
+.calc-show {
+    height: 110px;
+    padding: 40px;
+    text-align: right;
+}
+
+.calc-show p{
+    color: #cacaca;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.calc-show input {
+    font-size: 50px;
+    border: none;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #5e5e5e;
+    width: 100%;
+}
+
+.button-wrap {
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: column wrap;
+    /*justify-content: center;*/
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.button-wrap input {
+    margin-top: 16px;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 28px;
+    color: #6e6e6e;
+}
+
+.bg-color {
+    background-color: #f4f4f4!important;
+}
+
+.button-wrap input:last-child {
+    border-radius: 30px;
+    flex-grow: 2;
+    -webkit-flex-grow: 2;
+    background-color: #ff918d;
+    box-shadow: 1px 1px 8px #a05b58;
+    color: #fff;
+    font-size: 38px;
+}
+
