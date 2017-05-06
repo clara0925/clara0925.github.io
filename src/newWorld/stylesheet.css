@@ -19,17 +19,6 @@ img{
     display: block;
 }
 
-.clearfloat{
-    zoom: 1;
-}
-
-.clearfloat:after{
-    display: block;
-    clear: both;
-    content: "";
-    visibility: hidden;
-    height: 0;
-}
 /*reset样式结束*/
 
 header {
@@ -112,8 +101,8 @@ header .header-wrap {
 }
 
 #banner {
-    height: 692px;
-    width: 1280px;
+    min-height: 692px;
+    min-width: 1280px;
     background: url("img/banner.jpg") no-repeat;
     overflow: hidden;
 }
@@ -662,12 +651,14 @@ header .header-wrap {
     background-color: #ededee;
     border: none;
     margin: 8px 9px;
+    outline: none;
 }
 
 .volunteer-form input[placeholder] {
     color: rgba(35,24,21,.6);
     font-size: 12px;
     text-indent: 10px;
+    outline: none;
 }
 
 .volunteer-form textarea {
@@ -681,6 +672,7 @@ header .header-wrap {
     text-indent: 10px;
     line-height: 41px;
     resize: none;
+    outline: none;
 }
 
 .volunteer-form button {
@@ -693,6 +685,7 @@ header .header-wrap {
     font-size: 14px;
     letter-spacing: 1px;
     cursor: pointer;
+    outline: none;
 }
 
 footer {
@@ -718,7 +711,7 @@ footer {
     font-size: 21px;
     font-weight: 400;
     letter-spacing: 2px;
-    padding-top: 90px;
+    padding-top: 30px;
     font-family: "Adobe 黑体 Std R";
 }
 

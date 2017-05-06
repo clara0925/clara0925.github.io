@@ -80,15 +80,9 @@ body{
     text-align: right;
 }
 
-.calc-show p{
-    color: #cacaca;
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 1;
-}
-
 .calc-show input {
-    font-size: 50px;
+    margin-top: 30px;
+    font-size: 60px;
     border: none;
     text-align: right;
     letter-spacing: 1px;
@@ -116,6 +110,11 @@ body{
     background-color: #fff;
     font-size: 28px;
     color: #6e6e6e;
+    outline: none;
+}
+
+.button-wrap input:active {
+    font-size: 22px;
 }
 
 .bg-color {
@@ -130,5 +129,9 @@ body{
     box-shadow: 1px 1px 8px #a05b58;
     color: #fff;
     font-size: 38px;
+}
+
+.button-wrap input:last-child:active {
+    box-shadow: 0 0 0 #a05b58;
 }
 

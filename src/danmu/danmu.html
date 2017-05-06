@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频发射弹幕</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .bg{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            display: -webkit-flex;
+            background: #aea4a2;
+            background:-moz-linear-gradient(top, #cac0bf, #a49a98);
+            background:-webkit-gradient(linear, 0 0, 0 bottom, from(#cac0bf), to(#a49a98));
+            background:-o-linear-gradient(top, #cac0bf, #a49a98);
+        }
+        p{
+            position: absolute;
+            margin-left: 200px;
+            font-size: 200px;
+            color: #9b847f;
+            font-family: "Microsoft YaHei UI Light";
+            opacity: .2;
+            line-height: 1;
+        }
+        .main-part {
+            position:relative;
+            margin:auto;
+            z-index: 2;
+        }
+        .text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 768px;
+            height: 432px;
+        }
+        form{
+            display: flex;
+            margin-top: -5px;
+            height: 50px;;
+            background: #fafafa;
+        }
+        form input{
+            width: 60px;
+            background: #fafafa;
+            border: none;
+            margin: auto;
+            height: 35px;
+            background: none;
+            font-size: 20px;
+            outline: none;
+            cursor: pointer;
+            opacity: .8;
+        }
+        form input[placeholder]{
+            margin: auto 10px;
+            width: 600px;
+            height: 35px;
+            text-indent: 10px;
+            color: #2f2b2a;
+            background: #fff;
+            font-size: 14px;
+            cursor: text;
+        }
+    </style>
+</head>
+<body>
+  <div class="bg">
+      <p>Panda Video</p>
+      <div class="main-part">
+          <video src="0001.哔哩哔哩-【大熊猫】熊猫，是一种容易受惊的动物（上传错误已修正.mp4" controls="controls" width="768px" height="432px" style="background-color: #6e6e6e"></video>
+          <div class="text">
+              <marquee direction="left">我向右滚动</marquee>
+              <marquee direction="left">这是什么</marquee>
+              <marquee direction="left">什么鬼</marquee>
+          </div>
+          <form class="dm">
+              <input type="text" placeholder="您可以在这里输入弹幕吐槽哦~">
+              <input type="submit" value="💭">
+              <input type="submit" value="✖">
+          </form>
+      </div>
+
+  </div>
+
+</body>
+</html>
