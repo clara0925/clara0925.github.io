@@ -240,8 +240,6 @@ header .header-wrap {
     color:#a8aaaa;
     padding-left: 6px;
     font-size: 12px;
-    /*-webkit-appearance: none;*/
-    /*-moz-appearance: none;*/
     background-color: #fff;
 }
 
@@ -533,7 +531,7 @@ header .header-wrap {
     border-bottom: 16px solid transparent;
     border-top: 16px solid transparent;
     margin-top: -30px;
-    margin-left: 127px;
+    margin-left: 124px;
     z-index: 1;
 }
 
