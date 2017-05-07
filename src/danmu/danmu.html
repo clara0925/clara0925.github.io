@@ -10,14 +10,14 @@
             width: 100vw;
             display: flex;
             display: -webkit-flex;
-            background: #aea4a2;
-            background:-moz-linear-gradient(top, #cac0bf, #a49a98);
-            background:-webkit-gradient(linear, 0 0, 0 bottom, from(#cac0bf), to(#a49a98));
-            background:-o-linear-gradient(top, #cac0bf, #a49a98);
+            background: #c9bfbe;
+            background:-moz-linear-gradient(top, #c9bfbe, #a49293);
+            background:-webkit-gradient(linear, 0 0, 0 bottom, from(#c9bfbe), to(#a49293));
+            background:-o-linear-gradient(top, #c9bfbe, #a49293);
         }
         p{
             position: absolute;
-            margin-left: 200px;
+            margin-left: 230px;
             font-size: 200px;
             color: #9b847f;
             font-family: "Microsoft YaHei UI Light";
@@ -28,13 +28,16 @@
             position:relative;
             margin:auto;
             z-index: 2;
+            box-shadow: 0 5px 30px #706665;
         }
-        .text {
+        #screen {
             position: absolute;
             left: 0;
             top: 0;
             width: 768px;
             height: 400px;
+            font-size: 22px;
+            font-weight: 500;
         }
         form{
             display: flex;
@@ -43,7 +46,7 @@
             background: #fafafa;
         }
         form input{
-            width: 60px;
+            width: 45px;
             background: #fafafa;
             border: none;
             margin: auto;
@@ -60,7 +63,7 @@
             height: 35px;
             text-indent: 10px;
             color: #2f2b2a;
-            background: #fff;
+            background: #fafafa;
             font-size: 14px;
             cursor: text;
         }
@@ -71,21 +74,73 @@
       <p>Panda Video</p>
       <div class="main-part">
           <video src="0001.哔哩哔哩-【大熊猫】熊猫，是一种容易受惊的动物（上传错误已修正.mp4" controls="controls" width="768px" height="432px" style="background-color: #6e6e6e"></video>
-          <div class="text">
-              <marquee direction="left">我向右滚动</marquee>
-              <marquee direction="left">这是什么</marquee>
-              <marquee direction="left">什么鬼</marquee>
+
+
+          <div id="screen">
+              <marquee style="color:#fff">输入你自己的弹幕！</marquee>
           </div>
           <form class="dm">
-              <input type="text" placeholder="您可以在这里输入弹幕吐槽哦~">
-              <input type="submit" value="💭">
-              <input type="submit" value="✖">
+              <input type="text" id="text-dm" placeholder="您可以在这里输入弹幕吐槽哦~">
+              <input type="button" value="💬" id="send-dm" title="发送弹幕">
+              <input type="button" value="✖" id="stop-dm" title="屏蔽弹幕">
+              <input type="button" value="✔" id="start-dm" title="恢复弹幕">
           </form>
       </div>
 
   </div>
-<script>
 
-</script>
+  <script src="../web-app/js/jquery-3.2.0.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+          //点击展开
+          $("#start-dm").click(function(){
+              $("#screen").show();
+
+          });
+          $("#stop-dm").click(function(){
+              $("#screen").hide();
+          });
+
+          //发表评论
+          $("#send-dm").click(function(){
+              var text = $("#text-dm").val();
+              $("#screen").append("<marquee loop='1'>"+text + "</marquee>");
+              initScreen();
+          });
+      });
+
+      //初始化弹幕
+      function initScreen(){
+          var _top = 0;
+
+          $("#screen").find("marquee").show().each(function(){
+              var _left = $("#screen").width()-$(this).width();
+              var _height = $("#screen").height();
+
+              _top=_top+80;
+
+              if(_top>_height-100){
+                  _top = 80;
+              }
+
+              var time = 10000;
+              if($(this).index()%2==0){
+                  time = 20000;
+              }
+              //设定文字的初始化位置
+              $(this).css({left:_left,top:_top,color:getRandomColor()});
+              $(this).animate({left:"-"+_left+"px"},time,function(){
+
+              });
+          });
+      }
+
+      //随机获取颜色值
+      function getRandomColor(){
+          return '#'+(function(h){
+                      return new Array(7-h.length).join("0")+h
+                  })((Math.random()*0x1000000<<0).toString(16))
+      }
+  </script>
 </body>
 </html>
