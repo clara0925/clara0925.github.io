@@ -57,6 +57,7 @@
     border: none;
     background-color: #8cb1bb;
     color: #c6f4fe;
+    -webkit-appearance: none;
 }
 
 #time-now {margin-top: 30px;}

@@ -65,7 +65,6 @@ body{
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .calc-container {
@@ -108,10 +107,14 @@ body{
     width: 60px;
     border: none;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
     background-color: #fff;
     font-size: 28px;
     color: #6e6e6e;
     outline: none;
+    line-height: 60px;
+    text-align: center;
+    -webkit-appearance: none;
 }
 
 .button-wrap input:active {
@@ -123,7 +126,8 @@ body{
 }
 
 .button-wrap input:last-child {
-    border-radius: 25px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
     flex-grow: 2;
     -webkit-flex-grow: 2;
     background-color: #ff918d;
