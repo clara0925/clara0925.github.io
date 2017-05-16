@@ -22,12 +22,14 @@ body { background: url("img/bg.jpg") no-repeat;
     color: #fff;
     background: rgba(0, 0, 0, 0.25);
 }
+
 .quote-wrapper button {
     border: none;
     background: transparent;
     color: inherit;
     cursor: pointer;
     outline: none;
+    margin: 10px;
 }
 .quote-wrapper button img {
     height: 20px;
@@ -41,7 +43,8 @@ body { background: url("img/bg.jpg") no-repeat;
             <!--短语在这里-->
 
         </div>
-        <button id="getQuote"><img src="img/change.png"> &nbsp;换一句</button>
+        <button id="getQuote" onclick="newQuote()"><img src="img/change.png"> 换一句</button>
+        <button id="shareWeibo"><img src="img/weibo.png"> 分享</button>
     </div>
 
 <script type="text/javascript" src="../web-app/js/jquery-3.2.0.min.js"></script>
