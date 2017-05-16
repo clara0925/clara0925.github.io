@@ -1,6 +1,38 @@
 /** Created by Clara on 2017/5/14. */
 
- var quotes = [  "If you wait for the perfect moment when all is safe and assured, it may never arrive. " +
+$(document).ready(function () {
+
+    function newQuote(){
+        $.ajax({
+            type: "GET",
+            url: "http://api.forismatic.com/api/1.0/",
+            dataType: "jsonp",
+            jsonp: "jsonp",
+            data: {
+                method: "getQuote",
+                lang: "en",
+                format: "jsonp"
+            },
+            success: function (response) {
+                if(response.quoteAuthor){
+                    $("#quoteDisplay").html("“" + response.quoteText + "”" + "by " + response.quoteAuthor);
+                }
+                else {
+                    $("#quoteDisplay").html("“" + response.quoteText + "”" + "by Unknown" );
+                }
+            }
+        })
+    }
+    newQuote();
+
+    $("#getQuote").on("click",function (event) {
+        event.preventDefault();
+        newQuote();
+    })
+});
+
+
+/** var quotes = [  "If you wait for the perfect moment when all is safe and assured, it may never arrive. " +
                 "Mountains will not be climbed, races won, or lasting happiness achieved.   by Maurice Chevalier, Actor",
                     "Change your life today. Don’t gamble on the future, act now, without delay.   by Simone de Beauvoir, Writer",
                 "Be happy for this moment. This moment is your life.   by Omar Khayyam, Polymath",
@@ -20,5 +52,19 @@ document.getElementById("quoteDisplay").innerHTML = quotes[randomNumber];
 function newQuote() {
     var randomNumber = Math.floor(Math.random() * quotes.length);
     document.getElementById("quoteDisplay").innerHTML = quotes[randomNumber];
-}
+} */
+
+// function newQuote(){
+//     var request = new XMLHttpRequest();
+//      request.open("GET","http://api.forismatic.com/api/1.0/",true);
+//      request.getResponseHeader("Content-Type");
+//      request.send();
+//
+//     request.onreadystatechange = function(){
+//         if(request.readyState === 4 && request.status === 200) {
+//             document.getElementById("quoteDisplay").innerHTML = request.responseText;
+//         }
+//     };
+// }
+
 

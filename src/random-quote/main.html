@@ -13,7 +13,7 @@ body { background: url("img/bg.jpg") no-repeat;
        display: flex;}
 .quote-wrapper {
     margin: auto ;
-    padding: 20px;
+    padding: 20px 30px;
     width: 70%;
     text-align: center;
     letter-spacing: 1px;
@@ -27,6 +27,7 @@ body { background: url("img/bg.jpg") no-repeat;
     background: transparent;
     color: inherit;
     cursor: pointer;
+    outline: none;
 }
 .quote-wrapper button img {
     height: 20px;
@@ -40,9 +41,10 @@ body { background: url("img/bg.jpg") no-repeat;
             <!--短语在这里-->
 
         </div>
-        <button onclick="newQuote()"><img src="img/change.png"> &nbsp;换一句</button>
+        <button id="getQuote"><img src="img/change.png"> &nbsp;换一句</button>
     </div>
 
+<script type="text/javascript" src="../web-app/js/jquery-3.2.0.min.js"></script>
 <script src="main.js"></script>
 
 </body>
