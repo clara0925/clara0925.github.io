@@ -25,8 +25,9 @@ function newQuote() {
     document.getElementById("quoteDisplay").innerHTML = quotes[randomNumber];
 }
 
-function share(){
-    window.open("http://v.t.sina.com.cn/share/share.php?title=" + encodeURIComponent("哇~至理名言欸~" + " " +document.getElementById("quoteDisplay").innerHTML));
+function shareToWeibo(){
+    window.open("http://v.t.sina.com.cn/share/share.php?title=" + encodeURIComponent("哇~至理名言欸~" + 
+            " " +document.getElementById("quoteDisplay").innerHTML));
 }
 
 
