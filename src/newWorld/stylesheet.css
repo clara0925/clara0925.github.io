@@ -2,7 +2,7 @@
 body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea{
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Adobe Fan Heiti Std B", "Microsoft YaHei", Arial, sans-serif;
 }
 
 a{
@@ -276,9 +276,9 @@ header .header-wrap {
     margin-left: 448px;
     margin-top: 23px;
 }
-
+/*============================================新世界活动信息=============================================*/
 .new-world-info {
-    /*height:1738px;*/
+
     width: 1280px;
 }
 .new-world {
@@ -290,7 +290,7 @@ header .header-wrap {
 
 .new-world ul {
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: 112px;
     text-align: center;
 }
@@ -299,36 +299,90 @@ header .header-wrap {
     display: inline-block;
     padding:0 18px;
     text-align: center;
+    /*position: relative;*/
 }
 
 .new-world li img {
+    position: relative;
     border: 1px #e8e8e8 solid;
     padding: 14px 12px;
     background-color: #fff;
+    z-index: 2;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
 }
 
-.new-world li:hover img {
-    position: relative;
-    -webkit-animation: move .5s 1;
-    -webkit-animation-fill-mode: forwards;
+.new-world img:hover {
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    animation: move .2s 1;
+    -webkit-animation: move .2s 1;
+}
+.new-world li:hover .small-title {
+    opacity: 0;
+    position: absolute;
+}
+.new-world li:hover .big-title {
+    margin-top: -50px;
+    position: absolute;
+    opacity: 0.88;
 }
 
-@-webkit-keyframes  move {
-    from {top:0;}
-    to {top:8px;}
+@keyframes move {
+    0%{
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+      }
+    25%{
+        transform: translateY(2px);
+        -webkit-transform: translateY(2px);
+       }
+    50%{
+        transform: translateY(4px);
+        -webkit-transform: translateY(4px);
+       }
+    75%{
+        transform: translateY(6px);
+        -webkit-transform: translateY(6px);
+       }
+    100%{
+        transform: translateY(8px);
+        -webkit-transform: translateY(8px);
+        }
 }
 
-.new-world li:hover h5 {
+@-webkit-keyframes move {
+    0%{
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(2px);
+        -webkit-transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(4px);
+        -webkit-transform: translateY(4px);
+    }
+    75%{
+        transform: translateY(6px);
+        -webkit-transform: translateY(6px);
+    }
+    100%{
+        transform: translateY(8px);
+        -webkit-transform: translateY(8px);
+    }
+}
+.new-world li .big-title {
     color: rgba(58, 58, 58, 0.88);
     letter-spacing: 30px;
     text-indent: 30px;
     font-weight: 500;
     font-size: 21px;
-    float: left;
-    margin-top: -400px;
-    position: absolute;
+    opacity: 0;
+    transition: opacity .2s ease-in;
 }
-.new-world ul li h5 {
+.new-world ul li .small-title {
     color: rgba(58, 58, 58, 0.88);
     font-weight: 600;
     padding-top: 10px;
@@ -562,7 +616,7 @@ header .header-wrap {
     -webkit-animation: opacityChange .2s ease;
     -webkit-animation-fill-mode: forwards;
 }
-
+/*================================志愿者=================================*/
 .volunteer-info {
     height: 752px;
     background-color: #fdfdfd;
@@ -576,6 +630,7 @@ header .header-wrap {
     padding-top: 120px;
     line-height: 1.5;
 }
+
 
 .volunteer-info-title h4 {
     font-size: 21px;
@@ -597,22 +652,28 @@ header .header-wrap {
     color: #aaaaaa;
 }
 
+.volunteer-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 80px;
+}
+
 .volunteer-agreements {
-    width: 290px;
-    margin-left: 140px;
-    margin-top: 80px;
+    width: 300px;
 }
 
 .volunteer-agreements li{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .volunteer-agreements h5 {
     font-size: 14px;
     color: #231815;
     opacity: .8;
-    font-family: "Adobe 黑体 Std R";
     letter-spacing: 1px;
+    clear: both;
 }
 
 .volunteer-agreements p{
@@ -620,27 +681,18 @@ header .header-wrap {
     line-height: 1.75;
     color: rgba(35,24,21,.6);
     font-size: 12px;
-    font-family: "Adobe 宋体 Std L";
 }
 
-.volunteer-agreements p:last-child {
-    margin-top: 0;
-    text-align: right;
-}
-
-.read-more:before {
-    content: "∨";
-    padding-right: 4px;
-    color: #231815;
+.volunteer-agreements p a{
+    float: right;
+    text-decoration: none;
+    color: rgba(35,24,21,.5);
+    padding: 20px 0 10px 0;
 }
 
 .volunteer-form {
     width: 664px;
     height: 283px;
-    float: right;
-    /*background-color: #f6f6f6;*/
-    margin-right: 140px;
-    margin-top: -30%;
 }
 
 .volunteer-form input {
@@ -685,9 +737,10 @@ header .header-wrap {
     cursor: pointer;
     outline: none;
 }
-
+/*==============================底部============================*/
 footer {
-    width: 100vw;
+    /*width: 100vw;*/
+    width:100%;
 }
 
 .footer-top {

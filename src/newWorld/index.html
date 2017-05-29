@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>技术产品官网的页面架构及样式布局</title>
@@ -61,14 +61,11 @@
                     <option>河北省</option>
                     <option>陕西省</option>
                     <option>内蒙古自治区</option>
-                    <option>辽宁省</option>
                 </select>
                 <select class="form-style">
-                    <option selected="selected">北京市</option>
-                    <option>天津市</option>
-                    <option>深圳市</option>
-                    <option>上海市</option>
-                    <option>广州市</option>
+                    <option selected="selected">丰台区</option>
+                    <option>海淀区</option>
+                    <option>朝阳区</option>
                 </select>
                 <button type="button" class="form-style  activities-info-but">
                     搜索
@@ -80,21 +77,25 @@
             <div class="new-world">
                 <ul>
                     <li>
+                        <h5 class="big-title">北京活动<br><span>新社区大联盟</span></h5>
                         <img src="img/img1.jpg"/>
-                        <h5>北京活动<br><span>新社区大联盟</span></h5>
+                        <h5 class="small-title">北京活动<br><span>新社区大联盟</span></h5>
                         <p></p>
                     </li>
                     <li>
+                        <h5 class="big-title">上海活动<br><span>夜上海新景观探索</span></h5>
                         <img src="img/img2.jpg"/>
-                        <h5>上海活动<br><span>夜上海新景观探索</span></h5>
+                        <h5 class="small-title">上海活动<br><span>夜上海新景观探索</span></h5>
                     </li>
                     <li>
+                        <h5 class="big-title">深圳活动<br><span>全新海岸线观点站</span></h5>
                         <img src="img/img3.jpg"/>
-                        <h5>深圳活动<br><span>全新海岸线观点站</span></h5>
+                        <h5 class="small-title">深圳活动<br><span>全新海岸线观点站</span></h5>
                     </li>
                     <li>
+                        <h5 class="big-title">香港活动<br><span>奢侈消费大派送</span></h5>
                         <img src="img/img4.jpg"/>
-                        <h5>香港活动<br><span>奢侈消费大派送</span></h5>
+                        <h5 class="small-title">香港活动<br><span>奢侈消费大派送</span></h5>
                     </li>
                 </ul>
 
@@ -111,11 +112,6 @@
                             新世界新世界是个新世界 新世界是个新世界新
                             世界是个新世界</p>
                         <button type="button">更多详情</button>
-                        <!--<ul class="dot-3">-->
-                            <!--<li class="dot"></li>-->
-                            <!--<li class="dot"></li>-->
-                            <!--<li class="dot"></li>-->
-                        <!--</ul>-->
                     </div>
             </div>
                 <div class="love-living-wrap">
@@ -140,27 +136,67 @@
                 <small>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br>
                     那就不要犹豫，快来加入我们，成为改变所有人生活的人 </small>
             </div><!-- 志愿者标题-->
-            <div class="volunteer-agreements">
-                <ul>
-                    <li>
-                        <h5>新世界志愿者协议</h5>
-                        <p>加入新世界志愿者的人员必须遵守中华人民共共和国的
-                            相关法律法规，并且本着平等资源的原则</p>
-                        <p class="read-more">more</p>
-                    </li>
-                    <li>
-                        <h5>新世界志愿者权利</h5>
-                        <p>新世界志愿者享受新世界内部所有资源共享的权利，并
-                            且享受所在四新世界活动的优先参与资格</p>
-                        <p class="read-more">more</p>
-                    </li>
-                    <li>
-                        <h5>更多条款</h5>
-                        <p class="read-more">more</p>
-                    </li>
-                </ul>
-            </div><!--左边协议部分-->
-            <div class="volunteer-form">
+            <div class="volunteer-wrapper">
+                <div class="volunteer-agreements">
+                    <ul>
+                        <li>
+                            <h5>新世界志愿者协议</h5>
+                            <p>加入新世界志愿者的人员必须遵守中华人民共共和国的
+                                相关法律法规，并且本着平等资源的原则
+                                <a href="#" class="read-more" onclick="showText(this)">∨ more</a>
+                            </p>
+                            <p class="hide-text" style="display: none">加入新世界志愿者的人员必须遵守中华人民共共和国的
+                                相关法律法规，并且本着平等资源的原则加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规
+                                <a href="#" class="read-more" onclick="hideText(this)">∧ more</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <h5>新世界志愿者权利</h5>
+                            <p>新世界志愿者享受新世界内部所有资源共享的权利，并
+                                且享受所在四新世界活动的优先参与资格
+                                <a href="javascript:;" class="read-more" onclick="showText(this)">∨ more</a>
+                            </p>
+                            <p class="hide-text" style="display: none">新世界志愿者享受新世界内部所有资源共享的权利，并
+                                且享受所在四新世界活动的优先参与资格新世界志愿者享受新世界内部所有资源共享的权利，并
+                                且享受所在四新世界活动的优先参与资格
+                                <a href="javascript:;" class="read-more" onclick="hideText(this)">∧ more</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <h5>更多条款</h5>
+                            <p>所有解释权归新世界
+                                <a href="javascript:;" class="read-more" onclick="showText(this)">∨ more</a>
+                            </p>
+                            <p class="hide-text" style="display: none">所有解释权归新世界<br>所有解释权归新世界
+                                <a href="javascript:;" class="read-more" onclick="hideText(this)">∧ more</a>
+                            </p>
+                        </li>
+
+                    </ul>
+     <script>
+         function showText(obj){
+             var a = obj.parentNode;
+             a.style.display = "none";
+             if(a.nodeType != -1){
+                 a = a.nextSibling;
+             }
+             a.nextSibling.style.display = "block";
+
+         }
+
+         function hideText(obj){
+                var b = obj.parentNode;
+                b.style.display = "none";
+                if(b.previousSibling != -1){
+                    b = b.previousSibling;
+                }
+               b.previousSibling.style.display = "block";
+         }
+     </script>
+                </div><!--左边协议部分-->
+                <div class="volunteer-form">
                 <form>
                     <input type="text" placeholder="姓名：" id="name"/>
                     <input type="text" placeholder="年龄：" id="age"/>
@@ -170,14 +206,9 @@
                     <button TYPE="button">提交申请</button>
                 </form>
             </div><!--右边表单部分-->
+            </div>
         </div>
-
     </div>
-
-    <footer>
-
-    </footer>
-
     <footer>
         <div class="footer-top">
             <div class="footer-top-title">
@@ -200,16 +231,21 @@
         <div class="footer-bottom">
             <div class="footer-bottom-wrap">
                 <p>&copy;2016新世界</p>
-                <a href="" id="goToTop">back to top</a>
+                <a href="#" onclick="goToTop()">back to top</a>
             </div>
         </div>
     </footer>
 
     <script>
-        var a = document.getElementById('goToTop')
-            a.onclick = function (){
-                window.scrollTo(0,0)
-            }
+        function goToTop() {
+            var a = document.body.scrollTop;
+
+            if(a > 0){
+                    window.requestAnimationFrame(goToTop);
+                    window.scrollTo(0,a-a/10)
+                    }
+        }
+
     </script>
 </body>
 </html>
