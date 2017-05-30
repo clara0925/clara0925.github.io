@@ -7,14 +7,36 @@
     <link href="main.css" rel="stylesheet">
     <link rel="stylesheet" href="src/animate.min.css">
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script>
+        //导航定位
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var top=$(document).scrollTop();
+                var currentItemId="";
+                $(".scroll-item").each(function(){
+                    var itemTop= $(this).offset().top;
+                    if( top > itemTop - 600){
+                        currentItemId = "#" + $(this).attr("id");
+                    }else{
+                        return false;
+                    }
+                });
+                var cur= $("nav").find(".current");
+                if(currentItemId && cur.attr("href")!=currentItemId){
+                    cur.removeClass("current");
+                    $("nav").find("[href='"+currentItemId+"']").addClass("current");
+                }
+            })
+        })
+    </script>
     <title>clara's website</title>
 </head>
 <body>
   <header>
-      <div class="nav-name"><img src="img/name-clara.png"></div>
+      <div class="my-logo"><img src="img/name-clara.png"></div>
       <nav>
           <ul>
-              <li class="nav-list nav-list-after"><a href="#pot-1">关于我</a></li>
+              <li class="nav-list nav-list-after current"><a href="#pot-1">关于我</a></li>
               <li class="nav-list nav-list-after"><a href="#pot-2">作品</a></li>
               <li class="nav-list nav-list-after"><a href="#pot-3">技能</a></li>
               <li class="nav-list"><a href="#pot-4">联系我</a></li>
@@ -22,7 +44,7 @@
       </nav>
   </header>
  <!--导航结束-->
-  <div class="index-banner" id="pot-1">
+  <div class="index-banner scroll-item" id="pot-1">
           <div class="banner-text-container wow fadeInLeft" data-wow-duration="2s" >
               <h1><span>前端开发<br>
                   Front-End Dev</span><br></h1>
@@ -33,7 +55,7 @@
   </div>
   <!--banner结束-->
 
-  <div class="work-part"  id="pot-2">
+  <div class="work-part scroll-item"  id="pot-2">
     <h1>My Work.</h1>
           <div class="work">
 
@@ -134,7 +156,7 @@
   </script>
 
 <!--作品结束-->
-  <div class="skill"  id="pot-3">
+  <div class="skill scroll-item"  id="pot-3">
       <h1>I Can.</h1>
       <ul class="skill-list-container">
           <li class="skill-list">
@@ -155,7 +177,7 @@
       </ul>
   </div>
   <!--技能部分结束-->
-  <div class="nonsense"  id="pot-4">
+  <div class="nonsense scroll-item"  id="pot-4">
           <p>"It is a long established fact that a reader will be distracted by the
               readable content of a page when looking at its layout."
               <br>
@@ -170,7 +192,6 @@
               <li><a href="https://github.com/clara0925" target="_blank"><img src="img/github.png"></a></li>
               <li title="下载简历"><a href="#pot-4"><img src="img/download.png"></a></li>
           </ul>
-      <!--<p>原子&nbsp;&nbsp;|&nbsp;&nbsp;360143389@qq.com &nbsp;&nbsp;|&nbsp;&nbsp; 深圳</p>-->
   </footer>
   <!--<script type="text/javascript">-->
       <!--$('footer ul li').hover(function(){-->

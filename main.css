@@ -34,7 +34,7 @@ header {
     background-color: #9d9a95;
 }
 
-.nav-name {
+.my-logo {
     display: inline-block;
     margin-left: 2%;
     margin-top: 14px;
@@ -59,7 +59,9 @@ nav{
 
 .nav-list a{  opacity: .8; }
 
-.nav-list>a:hover{
+.nav-list a.current,
+.nav-list a:hover{
+    text-shadow: 0 4px 10px #fff;
     opacity: 1;
     transition-duration: .5s;
     transition-timing-function: ease;
