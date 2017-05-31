@@ -5,7 +5,7 @@ body,nav,header,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,
     top: 0;
 }
 body {
-    font-family: Arial,"微软雅黑";
+    font-family:"Adobe Fan Heiti Std B", "Microsoft YaHei", Arial, sans-serif;
     font-size: 14px;
     color: #434343;
     overflow-x: hidden ;
@@ -83,7 +83,7 @@ nav{
 /*banner开始======================================================*/
 
 .index-banner {
-    background: url("img/banner.jpg") no-repeat right center;
+    background: url("../img/banner.jpg") no-repeat right center;
     background-size: cover;
     font-size: 20px;
 
@@ -109,7 +109,7 @@ font-size: 18px;
 
 @media screen and (max-width:1088px){
     .index-banner {
-        background: url("img/banner.jpg") no-repeat center center;
+        background: url("../img/banner.jpg") no-repeat center center;
         background-size: cover;
         font-size: 12px;
     }
@@ -117,7 +117,7 @@ font-size: 18px;
 
 @media screen and (max-width:1024px){
     .index-banner {
-        background: url("img/banner.jpg") no-repeat left center;
+        background: url("../img/banner.jpg") no-repeat left center;
         background-size: cover;
     }
 }
@@ -301,7 +301,6 @@ footer>p{
     font-size: 15px;
     color: #fafafa;
     letter-spacing: 1px;
-    font-family: "Microsoft JhengHei Light";
     padding-top: 32px;
 }
 
@@ -332,7 +331,7 @@ footer>p{
 .footer-icon-container a .QR{
     position: absolute;
     display: block;
-    background: url("img/qr.png") center center no-repeat;
+    background: url("../img/qr.png") center center no-repeat;
     background-size: cover;
     height: 180px;
     width: 150px;

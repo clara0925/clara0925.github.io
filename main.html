@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="img/girl.ico">
-    <link href="main.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/animate.min.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script>
         //导航定位
@@ -13,6 +13,7 @@
             $(window).scroll(function(){
                 var top=$(document).scrollTop();
                 var currentItemId="";
+
                 $(".scroll-item").each(function(){
                     var itemTop= $(this).offset().top;
                     if( top > itemTop - 600){
@@ -44,7 +45,7 @@
       </nav>
   </header>
  <!--导航结束-->
-  <div class="index-banner scroll-item" id="pot-1">
+  <section class="index-banner scroll-item" id="pot-1">
           <div class="banner-text-container wow fadeInLeft" data-wow-duration="2s" >
               <h1><span>前端开发<br>
                   Front-End Dev</span><br></h1>
@@ -52,10 +53,10 @@
               看完之后跟我聊聊哦~</p>
               <!--<input type="button" value="MORE ABOUT ME" id="banner-btn-about">-->
           </div>
-  </div>
+  </section>
   <!--banner结束-->
 
-  <div class="work-part scroll-item"  id="pot-2">
+  <section class="work-part scroll-item"  id="pot-2">
     <h1>My Work.</h1>
           <div class="work">
 
@@ -140,7 +141,7 @@
 
 
       </div>
-  </div>
+  </section>
   <script>
 
       $(".work-describe").hide();
@@ -156,7 +157,7 @@
   </script>
 
 <!--作品结束-->
-  <div class="skill scroll-item"  id="pot-3">
+  <section class="skill scroll-item"  id="pot-3">
       <h1>I Can.</h1>
       <ul class="skill-list-container">
           <li class="skill-list">
@@ -175,15 +176,15 @@
               <span>PM经验让我对产品的需求有自己的看法，从而对产品不断进行优化，提高用户体验。</span>
           </li>
       </ul>
-  </div>
+  </section>
   <!--技能部分结束-->
-  <div class="nonsense scroll-item"  id="pot-4">
+  <section class="nonsense scroll-item"  id="pot-4">
           <p>"It is a long established fact that a reader will be distracted by the
               readable content of a page when looking at its layout."
               <br>
               <span>- Frank Rapacciuolo -</span>
           </p>
-  </div>
+  </section>
 <!--名言结束-->
   <footer>
           <p>360143389@qq.com | yuanzi0925@gmail.com</p>
