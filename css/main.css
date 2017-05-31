@@ -51,12 +51,6 @@ nav{
     padding: 10px;
 }
 
-@media screen and (max-width:520px){
-    .nav-list {
-        display: none;
-    }
-}
-
 .nav-list a{  opacity: .8; }
 
 .nav-list a.current,
