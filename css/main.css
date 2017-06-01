@@ -4,11 +4,13 @@ body,nav,header,div,ul,ol,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,
     padding: 0;
     top: 0;
 }
+
 body {
     font-family:"Adobe Fan Heiti Std B", "Microsoft YaHei", Arial, sans-serif;
     font-size: 14px;
     color: #434343;
     overflow-x: hidden ;
+    cursor: url("http://www.ibloger.net/cursor.ico"),auto;
 }
 
 small {
@@ -25,6 +27,39 @@ a {
 }
 
 /*end of reset*/
+
+#preAnimation {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background: #efe9e6;
+}
+
+.double-circle{
+    margin: 400px auto;
+    height: 18px;
+    width:  18px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: -60px 0 0 #fff;
+    -webkit-box-shadow: -60px 0 0 #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    transform-origin: 50% 20%;
+    -webkit-transform-origin: 50% 20%;
+}
+
+@keyframes spin {
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
+@-webkit-keyframes spin {
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
 
 header {
     position: fixed;

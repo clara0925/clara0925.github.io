@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="img/girl.ico">
+    <link rel="icon" href="img/mouse-b.ico">
     <link href="css/handheld.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
     <link href="css/main.css" rel="stylesheet" media="screen and (min-device-width: 480px)">
     <link rel="stylesheet" href="css/animate.min.css">
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            var preAnimation = document.getElementById("preAnimation");
+            document.body.removeChild(preAnimation);
+        });
+    </script>
     <script>
         //导航定位
         $(document).ready(function(){
@@ -34,6 +40,11 @@
     <title>clara's website</title>
 </head>
 <body>
+  <div id="preAnimation">
+      <div class="double-circle">
+
+      </div>
+  </div>
   <header>
       <div class="my-logo"><img src="img/name-clara.png"></div>
       <nav>
