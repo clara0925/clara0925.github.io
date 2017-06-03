@@ -84,28 +84,27 @@ nav li{
 }
 
 
-.banner-text-container {
-    position: relative;
-    margin: 0 1em;
-    padding-top: 30px;
-    max-width: 50em;
+.banner-text-wrapper {
+    text-align: right;
     height: 100vh;
+    padding: 2em .4em 0 .3em;
+    overflow: hidden;
 }
 
-.banner-text-container>h1 {
+.banner-text-wrapper>h1 {
     padding-top: 6em;
     font-size: 2em;
     color: #fff;
     font-weight: 500;
-    text-align: right;
+
 }
 
-.banner-text-container>span{
-    font-size: .5em;
+.banner-text-wrapper>span{
+    font-size: .4em;
     letter-spacing: .2em;
 }
 
-.banner-text-container>p {
+.banner-text-wrapper>p {
     max-width: 18.5em;
     padding: 1em 0;
     font-size: 1em;
@@ -132,6 +131,11 @@ nav li{
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     justify-content: center;
+}
+
+.work a {
+    opacity: 0;
+    margin-top: -100px;
 }
 
 .work-piece {

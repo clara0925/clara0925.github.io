@@ -1,11 +1,18 @@
 /**
  * Created by Clara on 2017/6/1.
  */
+//页面加载缓冲
 window.addEventListener("load", function() {
     var preAnimation = document.getElementById("preAnimation");
     document.body.removeChild(preAnimation);
 });
 
+//banner文字
+$(function(){
+    $(".banner-text-container").animate({left: 150,opacity:1},1500);
+});
+
+//滚动事件
 $(window).scroll(function() {
     if ($(document).scrollTop() > 690) {
         $("header").css({ background: "#ABD0CE" }).show("slow");
@@ -14,6 +21,7 @@ $(window).scroll(function() {
     }
 });
 
+//定位导航
 $(function() {
     $(window).scroll(function() {
         var top = $(document).scrollTop();
@@ -66,4 +74,19 @@ $(function() {
                 );
         }
     );
+});
+
+//作品动效
+$(window).scroll(function() {
+    var delay = 0;
+    if ($(document).scrollTop() > 300) {
+        $("#pot-2").find("a").each(function(){
+            $(this)
+                .delay(delay).animate(
+                {paddingTop: "100px",
+                 opacity: 1
+                },400,"swing");
+            delay += 200;
+        })
+    }
 });
