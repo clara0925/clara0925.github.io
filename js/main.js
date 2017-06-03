@@ -7,14 +7,14 @@ window.addEventListener("load", function() {
 });
 
 $(window).scroll(function() {
-    if ($(document).scrollTop() > 400) {
-        $("header").css({ background: "#ABD0CE" });
-    } else if ($(document).scrollTop() < 400) {
-        $("header").css({ background: "#9d9a95" });
+    if ($(document).scrollTop() > 690) {
+        $("header").css({ background: "#ABD0CE" }).show("slow");
+    } else if ($(document).scrollTop() < 690) {
+        $("header").css({ background: "#9d9a95" }).show("slow");
     }
 });
 
-$(document).ready(function() {
+$(function() {
     $(window).scroll(function() {
         var top = $(document).scrollTop();
         var currentItemId = "";
@@ -35,7 +35,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
+$(function() {
     $(".work-describe").hide();
     $(".work a").hover(
         function() {
