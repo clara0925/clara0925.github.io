@@ -29,7 +29,7 @@ $(function() {
 
         $(".scroll-item").each(function() {
             var itemTop = $(this).offset().top;
-            if (top > itemTop - 600) {
+            if (top > itemTop - 500) {
                 currentItemId = "#" + $(this).attr("id");
             } else {
                 return false;
@@ -79,14 +79,15 @@ $(function() {
 //作品动效
 $(window).scroll(function() {
     var delay = 0;
-    if ($(document).scrollTop() > 300) {
-        $("#pot-2").find("a").each(function(){
+    if ($(document).scrollTop() > 200) {
+        $(".work-part").find("a").each(function(){
             $(this)
                 .delay(delay).animate(
                 {paddingTop: "100px",
                  opacity: 1
-                },400,"swing");
-            delay += 200;
+                },500,"swing");
+            delay += 250;
         })
     }
 });
+

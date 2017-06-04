@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="icon" href="img/mouse-b.ico">
     <link href="css/handheld.css" rel="stylesheet" media="screen and (max-device-width: 480px)">
     <link href="css/main.css" rel="stylesheet" media="screen and (min-device-width: 480px)">
+    <!--[if lte IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+        <link rel="stylesheet" href="/css/ie.css">
+    <![endif]-->
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <title>clara's website</title>
@@ -27,7 +32,7 @@
       </nav>
   </header>
  <!--导航结束-->
-  <section class="index-banner" id="pot-1">
+  <section class="index-banner scroll-item" id="pot-1">
           <div class="banner-text-container banner-text-wrapper" >
               <h1><span>前端开发<br>
                   Front-End Dev</span><br></h1>
@@ -37,7 +42,7 @@
   </section>
   <!--banner结束-->
 
-  <section class="work-part"  id="pot-2">
+  <section class="work-part scroll-item"  id="pot-2">
     <h1>My Work.</h1>
           <div class="work">
               <a href="src/web-app/index.html" target="_blank">
